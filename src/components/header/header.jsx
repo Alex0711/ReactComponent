@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import { HiOutlineShoppingCart, HiMenuAlt1 } from "react-icons/hi";
+import MyOrder from "./myOrder/myOrder";
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+		setToggle(!toggle);
+	}
+
   return (
     <nav>
         <HiMenuAlt1 className="menu" />
@@ -32,11 +39,12 @@ const Header = () => {
       <div className="navbar-right">
         <ul>
           <li className="navbar-email">alex.senger@hotmail.com</li>
-          <li>
+          <li onClick={handleToggle} >
             <HiOutlineShoppingCart className="shopping-cart" />
           </li>
         </ul>
       </div>
+      {toggle && <MyOrder />}
     </nav>
   );
 };

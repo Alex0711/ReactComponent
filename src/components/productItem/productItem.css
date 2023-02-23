@@ -33,6 +33,11 @@
 	margin-bottom: 0;
 	color: var(--very-light-pink);
 }
+.shopping-cart {
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer
+}
 @media (max-width: 640px) {
 	.ProductItem {
 		width: 140px;
