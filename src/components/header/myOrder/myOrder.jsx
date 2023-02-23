@@ -1,8 +1,14 @@
 import React from "react";
-// import OrderItem from '../components/OrdersItem';
+import { useSelector } from "react-redux";
+import {
+	selector as cartSelector,
+  } from "../../../redux/features/cart";
+import OrderItem from "./orderItem/orderItem";
 import "./myOrder.css";
 
 const MyOrder = () => {
+  const { cart } = useSelector((state) => cartSelector(state));
+
   return (
     <aside className="MyOrder">
       <div className="title-container">
@@ -10,9 +16,9 @@ const MyOrder = () => {
         <p className="title">My order</p>
       </div>
       <div className="my-order-content">
-        {/* {state.cart.map(product => (
+        {cart.products.map(product => (
 					<OrderItem product={product} key={`orderItem-${product.id}`} />
-				))} */}
+				))}
         <div className="order">
           <p>
             <span>Total</span>

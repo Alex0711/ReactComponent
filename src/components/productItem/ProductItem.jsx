@@ -11,8 +11,12 @@ const ProductItem = ({ product }) => {
   const { cart } = useSelector((state) => cartSelector(state));
   const dispatch = useDispatch();
 
-  const buy = () => {
-    dispatch(cartActions.addToCart(product))
+  const addProduct = () => {
+    const newProduct = {
+      ...product,
+      id: cart.products.length
+    }
+    dispatch(cartActions.addToCart(newProduct));
   }
 
   return (
@@ -23,7 +27,7 @@ const ProductItem = ({ product }) => {
           <p>${product.price}</p>
           <p>{product.title}</p>
         </div>
-        <HiOutlineShoppingCart onClick={buy} className="shopping-cart"/>
+        <HiOutlineShoppingCart onClick={addProduct} className="shopping-cart"/>
       </div>
     </div>
   );
