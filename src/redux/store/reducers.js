@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux';
 
-// import counterReducer, {NAME as counterName} from '../features/counter';
+import cartReducer, {NAME as cartName} from '../features/cart';
 import usersReducer, {NAME as usersName} from '../features/users';
 import productsReducer, {NAME as productsName } from '../features/products';
 
 export default () => 
     combineReducers({
-    // [counterName]: counterReducer,
+    [cartName]: cartReducer,
     [usersName]: usersReducer,
     [productsName]: productsReducer,
 });
