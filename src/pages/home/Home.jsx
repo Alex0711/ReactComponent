@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   actionCreators as usersActions,
   selector as usersSelector,
-} from "../../redux/users";
+} from "../../redux/features/users";
 import ProductItem from "../../components/productItem/ProductItem";
 import "./home.css";
 

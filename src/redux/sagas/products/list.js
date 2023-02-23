@@ -4,7 +4,7 @@ import { actionTypes as userActions } from '../../features/users';
 
 export default function* tryUsersList() {
     try {
-        const URL = 'https://jsonplaceholder.typicode.com/users'
+        const URL = 'https://api.escuelajs.co/api/v1/products'
         const response = yield call(fetch, URL)
         const data = yield call([response, 'json'])
 
