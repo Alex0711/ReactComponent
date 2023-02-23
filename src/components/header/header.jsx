@@ -1,10 +1,12 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import "./../../styles/header.css";
+import { HiOutlineShoppingCart, HiMenuAlt1 } from "react-icons/hi";
+
 
 const Header = () => {
   return (
     <nav>
-      phoneMenu
+      <HiMenuAlt1 />
       <div className="navbar-left">
         Un logo
         <ul>
@@ -34,7 +36,7 @@ const Header = () => {
           <li
             className="navbar-shopping-cart"
           >
-            cart
+            <HiOutlineShoppingCart />
           </li>
         </ul>
       </div>
