@@ -1,15 +1,15 @@
 import { call, put } from 'redux-saga/effects'
 
-import { actionTypes as userActions } from '../../features/users';
+import { actionTypes as productActions } from '../../features/products';
 
-export default function* tryUsersList() {
+export default function* tryProductsList() {
     try {
         const URL = 'https://api.escuelajs.co/api/v1/products'
         const response = yield call(fetch, URL)
         const data = yield call([response, 'json'])
 
-        yield put({ type: userActions.LIST_SUCCESS, data })
+        yield put({ type: productActions.LIST_SUCCESS, data })
     } catch (e) {
-        yield put({ type: userActions.LIST_FAILED })
+        yield put({ type: productActions.LIST_FAILED })
     }
 }
