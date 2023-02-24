@@ -1,16 +1,16 @@
 .MyOrder {
-	width: 360px;
-	padding: 24px;
+	width: 36rem;
 	box-sizing: border-box;
 	position: absolute;
 	right: 0;
 	background-color: white;
-	top: 60px;
+	top: 6rem;
 	bottom: 0;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
 	overflow-y: auto;
-	height: 350px;
+	overflow-x: hidden;
+	height: calc(100% - 60px);
 }
 .my-order-content{
 	display: flex;
@@ -19,6 +19,7 @@
 }
 .title-container {
 	display: flex;
+    align-items: center;
 }
 .title-container img {
 	transform: rotate(180deg);
@@ -50,7 +51,13 @@
 	text-align: end;
 	font-weight: bold;
 }
-
+.checkout {
+    position:sticky;
+    bottom: 0px;
+    background-color: var(--white);
+    width: 35rem;
+    /* right: 0px   ; */
+}
 .primary-button {
 	background-color: var(--hospital-green);
 	border-radius: 8px;
@@ -61,6 +68,13 @@
 	font-size: var(--md);
 	font-weight: bold;
 	height: 50px;
+}
+.arrow-left {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1.6rem;
+    margin-left: 1.6rem;
 }
 @media (max-width: 640px) {
 	.MyOrder {

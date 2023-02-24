@@ -18,8 +18,6 @@ const Home = () => {
   const { users } = useSelector((state) => usersSelector(state));
   const { products } = useSelector((state) => productsSelector(state));
 
-  console.log({users, products})
-
   useEffect(() => {
     dispatch(usersActions.list());
     dispatch(productsActions.list());

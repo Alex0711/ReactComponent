@@ -51,6 +51,25 @@ nav {
 	margin-right: 1rem;
 	cursor: pointer;
 }
+.cart-container {
+	
+}
+.items-count {
+	position: absolute;
+	top: 1.3rem;
+	right: 0.6rem;
+	background-color: var(--hospital-green);
+	color: black;
+	border-radius: 50%;
+	width: 1.4rem;
+	height: 1.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--sm);
+	font-weight: bold;
+  }
+  
 
 @media (max-width: 640px) {
 	.menu {

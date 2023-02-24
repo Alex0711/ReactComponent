@@ -4,12 +4,13 @@ import {
   actionCreators as cartActions,
   selector as cartSelector,
 } from "../../../../redux/features/cart";
+import { HiXCircle } from "react-icons/hi"
 import "./orderItem.css";
+
 
 const OrderItem = ({ product }) => {
   const dispatch = useDispatch();
   const handleClick = () => {
-    console.log("click");
     dispatch(cartActions.removeFromCart(product));
   };
 
@@ -21,7 +22,7 @@ const OrderItem = ({ product }) => {
           <p>${product.price}</p>
           <p>{product.title}</p>
         </div>
-        <figure onClick={handleClick}>x</figure>
+        <HiXCircle onClick={handleClick} className="close-icon" />
       </div>
     </div>
   );
