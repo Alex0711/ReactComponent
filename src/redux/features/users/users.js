@@ -1,5 +1,8 @@
 import {createStructuredSelector} from 'reselect';
 
+//Agrego el estado de usuarios para hacerlo un poco más completo,
+//aunque no lo use en la aplicación
+
 export const NAME = 'users';
 
 // Action Types
