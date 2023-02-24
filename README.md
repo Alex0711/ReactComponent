@@ -1,12 +1,16 @@
 # REACT APP
 
-La presente aplicación se limita a fue creada con el fin de superar un prueba técnica, en la cual se me solicita usar las siguientes bibliotecas: 
+La presente aplicación fue creada con el fin de superar una prueba técnica, en la cual se me solicita usar las siguientes bibliotecas: 
 - Redux
 - Saga
 - Axios
 
 ```
-  Para ello se te pide realizar como PRUEBA un componente simple que solicite información simple y use Sagas con Redux; En donde Redux se encargará del procesamiento de datos y Sagas se encargará de las funciones asíncronas y la llamada de la API. Se solicita que sea finalizado y enviado para su revisión preferentemente el día viernes 24 de Febrero del 2023. 
+  Para ello se te pide realizar como PRUEBA un componente simple que solicite información
+  simple y use Sagas con Redux; En donde Redux se encargará del procesamiento de datos y
+  Sagas se encargará de las funciones asíncronas y la llamada de la API. Se solicita que sea
+  finalizado y enviado para su revisión preferentemente el día viernes 24 de Febrero del
+  2023. 
 
   El proyecto necesitará:
   * Reducers 
@@ -44,7 +48,8 @@ npm run start
 
 ### Características
 
-Es una aplicación muy simple que solo hace una petición a una API y trae una lísta de productos, los cuales son renderizados en el home de la aplicación y le permiten al usuario añadir y quitar estos productos a un carrito de compras. El cual se puede visualizar en la parte superior derecha.
+Es una aplicación muy simple que solo hace una petición a una API y trae una lísta de productos, los cuales son renderizados en el home de la aplicación y le permiten al usuario añadir estos productos a un carrito de compras a fin de verificar el correcto funcionamiento del estado. 
+La lista de productos añadidos se puede visualizar al darle click al carrito ubicado en la parte superior derecha y desde aquí se los pueden eliminar.
 
 ### Problemas conocidos
 

@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  actionCreators as usersActions,
-  selector as usersSelector,
-} from "../../redux/features/users";
+import { actionCreators as usersActions } from "../../redux/features/users";
 import {
   actionCreators as productsActions,
   selector as productsSelector,
@@ -15,7 +12,6 @@ import "./home.css";
 const Home = () => {
   const dispatch = useDispatch();
 
-  const { users } = useSelector((state) => usersSelector(state));
   const { products } = useSelector((state) => productsSelector(state));
 
   useEffect(() => {

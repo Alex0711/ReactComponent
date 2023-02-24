@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { HiOutlineShoppingCart, HiMenuAlt1 } from "react-icons/hi";
 import { selector as cartSelector } from "../../redux/features/cart";
@@ -12,6 +12,30 @@ const Header = () => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
+
+  const closeCart = () => {
+    setToggle(false)
+  }
+
+  const openCart = () => {
+    setToggle(true)
+  }
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeCart();
+      } else if (event.key === "Enter") {
+        openCart();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <nav>

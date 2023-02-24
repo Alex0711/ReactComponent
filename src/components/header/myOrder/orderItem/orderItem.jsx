@@ -1,12 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import {
-  actionCreators as cartActions,
-  selector as cartSelector,
-} from "../../../../redux/features/cart";
-import { HiXCircle } from "react-icons/hi"
+import { actionCreators as cartActions } from "../../../../redux/features/cart";
+import { HiXCircle } from "react-icons/hi";
 import "./orderItem.css";
-
 
 const OrderItem = ({ product }) => {
   const dispatch = useDispatch();
